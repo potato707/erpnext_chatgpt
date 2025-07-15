@@ -15,9 +15,9 @@ async function checkUserPermissionsAndShowButton() {
     const response = await frappe.call({
       method: "erpnext_chatgpt.erpnext_chatgpt.api.check_openai_key_and_role",
     });
-    if (response?.message?.show_button) {
+    // if (response?.message?.show_button) {
       showChatButton();
-    }
+    // }
   } catch (error) {
     console.error("Error checking permissions:", error);
   }
